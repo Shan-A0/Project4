@@ -14,19 +14,19 @@
  	    return false; 
      } 
      if(isset($_COOKIE['username'])){ 
-     		$userlistq =  "SELECT * FROM user;"; 
-     		$userlistres = mysqli_query($con,$userlistq); 
- 		    while($row=mysqli_fetch_array($userlistres)){ 
- 		      	$firstname= $row['first_name']; 
- 		      	$lastname= $row['last_name']; 
- 		      	$username= $row['username']; 
- 			 			echo "<tr>"; 
+          $userlistq =  "SELECT * FROM user;"; 
+          $userlistres = mysqli_query($con,$userlistq); 
+          while($row=mysqli_fetch_array($userlistres)){ 
+               $firstname= $row['first_name']; 
+               $lastname= $row['last_name']; 
+               $username= $row['username']; 
+               echo "<tr>"; 
                echo "<td>".$firstname."</td>"; 
                echo "<td>".$lastname."</td>"; 
                echo "<td>".$username."</td>"; 
-            echo "</tr>"; 
-     		} 
+               echo "</tr>"; 
+          } 
     }else{ 
-    echo"Not logged in"; 
-  	} 
+    echo"Not logged in";
+    } 
 ?>
