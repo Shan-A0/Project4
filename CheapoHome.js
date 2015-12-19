@@ -33,7 +33,7 @@ function insert_data(){
      var bod = document.getElementById("message_content").value; 
      var req_mes = "recipient="+rec+"&subject="+sub+"&body="+bod; 
      var xmlHttp = new XMLHttpRequest(); 
-     xmlHttp.open("POST","message.php",true); 
+     xmlHttp.open("POST","CheapoMessage.php",true); 
      xmlHttp.onreadystatechange = function(){ 
          if(xmlHttp.readyState==4 && xmlHttp.status==200){ 
            var responseMessage = xmlHttp.responseText; 
@@ -73,7 +73,7 @@ function view_users(){
              document.getElementById("pagecontent").innerHTML= responseMessage; 
          } 
      }; 
-     xmlHttp.open("GET","view_users.php",true); 
+     xmlHttp.open("GET","CheapoViewuser.php",true); 
      xmlHttp.send();    
 } 
 
@@ -84,7 +84,7 @@ function logout(){
          if(xmlHttp.readyState==4 && xmlHttp.status==200){ 
              var responseMessage = xmlHttp.responseText; 
              alert(responseMessage); 
-              window.location.href="login.html"; 
+              window.location.href="CheapoLogin.html"; 
          } 
      }; 
      xmlHttp.open("GET","logout.php",true); 
@@ -100,6 +100,6 @@ function read(){
              // document.getElementById("pagecontent").innerHTML= responseMessage; 
          } 
      }; 
-     xmlHttp.open("GET","read.php",true); 
+     xmlHttp.open("GET","CheapoRead.php",true); 
      xmlHttp.send(); 
 } 
