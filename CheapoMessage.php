@@ -1,13 +1,13 @@
 <table id="table_header"> 
 	<tr> 
-    <th id ="header1">From</th> 
- 		<th id ="header2">Subject</th> 
- 		<th id ="header3">Body</th> 
+	<th id ="header1">From</th> 
+	<th id ="header2">Subject</th> 
+	<th id ="header3">Body</th> 
  	</tr> 
 <?php 
  	$con=mysqli_connect("localhost","", "" ); 
  	if (!$con) { 
-    echo "Connection failed"; 
+	echo "Connection failed"; 
  		return false; 
  	} 
  	if(isset($_COOKIE['username'])){ 
